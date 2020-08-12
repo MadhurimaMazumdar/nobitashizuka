@@ -1,2 +1,0 @@
-# nobitashizuka
-personal blog
