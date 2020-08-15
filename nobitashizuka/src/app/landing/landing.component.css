@@ -18,6 +18,7 @@
     font-size: 55px;
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 2px;
+    font-weight: 600;
 }
   
   .entered{
@@ -29,4 +30,5 @@
     color: black;
     font-size: 23px;
     width: 16%;
+    border: pink solid 2px;
   }
