@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "nobitashizuka"
+    }
+  },
+  "defaultProject": "nobitashizuka",
+  "cli": {
+    "analytics": false
+  }
 }
