@@ -6,16 +6,16 @@
     
     padding-top: 40px;
 }
-nav-link:active {
+.nav-link:visited {
     color:green;
   }
   
   
-  nav-link:hover {
-    color: red;
+  .nav-link:hover {
+    color:red;
   }
   
   
-  nav-text:active {
-    color: yellow;
+  .nav-link:active {
+    color: blue;
   }
