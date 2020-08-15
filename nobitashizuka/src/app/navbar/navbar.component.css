@@ -6,10 +6,6 @@
     
     padding-top: 40px;
 }
-.nav-link:visited {
-    color:green;
-  }
-  
   
   .nav-link:hover {
     color:red;
@@ -18,4 +14,5 @@
   
   .nav-link:active {
     color: blue;
+    
   }
