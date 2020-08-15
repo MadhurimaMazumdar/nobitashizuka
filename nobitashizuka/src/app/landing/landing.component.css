@@ -2,4 +2,21 @@
 {
     height: 100%;
     width: 100%;
+    opacity: 0.5;
 }
+
+.landingparent{
+    overflow-y : hidden
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .entered{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
