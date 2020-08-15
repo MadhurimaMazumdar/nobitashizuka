@@ -6,3 +6,16 @@
     
     padding-top: 40px;
 }
+a:visited {
+    color: green;
+  }
+  
+  
+  a:hover {
+    color: red;
+  }
+  
+  
+  a:active {
+    color: yellow;
+  }
