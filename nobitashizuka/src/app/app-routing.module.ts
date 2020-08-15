@@ -6,7 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { from } from 'rxjs';
 
 
-const Routes: Routes = [{ path: 'home', component: HomeComponent }];
+// const Routes: Routes = [{ path: 'home', component: HomeComponent }];/
 
 
 const routes: Routes = [
@@ -15,7 +15,7 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  imports: [RouterModule.forRoot(Routes)],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
