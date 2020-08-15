@@ -6,13 +6,27 @@ import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
+import { HomeleftComponent } from './homeleft/homeleft.component';
+import { Homeright1Component } from './homeright1/homeright1.component';
+import { Homeright2Component } from './homeright2/homeright2.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { PhotosComponent } from './photos/photos.component';
+import { BlogComponent } from './blog/blog.component';
+import { VideoComponent } from './video/video.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    HomeleftComponent,
+    Homeright1Component,
+    Homeright2Component,
+    AboutusComponent,
+    PhotosComponent,
+    BlogComponent,
+    VideoComponent
   ],
   imports: [
     BrowserModule,
