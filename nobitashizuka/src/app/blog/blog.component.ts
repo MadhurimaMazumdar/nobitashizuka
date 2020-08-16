@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
 
+  count : any = 4;
+  arr = new Array(this.count);
+
   constructor() { }
 
   ngOnInit(): void {

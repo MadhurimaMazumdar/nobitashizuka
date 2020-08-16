@@ -13,6 +13,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { PhotosComponent } from './photos/photos.component';
 import { BlogComponent } from './blog/blog.component';
 import { VideoComponent } from './video/video.component';
+import { BlogbodyComponent } from './blogbody/blogbody.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { VideoComponent } from './video/video.component';
     AboutusComponent,
     PhotosComponent,
     BlogComponent,
-    VideoComponent
+    VideoComponent,
+    BlogbodyComponent
   ],
   imports: [
     BrowserModule,
