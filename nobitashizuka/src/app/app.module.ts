@@ -14,9 +14,11 @@ import { PhotosComponent } from './photos/photos.component';
 import { BlogComponent } from './blog/blog.component';
 import { VideoComponent } from './video/video.component';
 import { BlogbodyComponent } from './blogbody/blogbody.component';
-import {HttpModule} from '@angular/http';
+// import {HttpModule} from '@angular/http';
+import {HttpClientModule} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
-import {DataService} from './Data.service';
+import {DataService} from './data.service';
 import { ServerpageComponent } from './serverpage/serverpage.component';
 @NgModule({
   declarations: [
@@ -37,9 +39,9 @@ import { ServerpageComponent } from './serverpage/serverpage.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpModule,FormsModule,
+    HttpClientModule,FormsModule,
   ],
-  providers: [CommonService],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

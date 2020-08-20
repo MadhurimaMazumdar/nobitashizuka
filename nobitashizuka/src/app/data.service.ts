@@ -1,27 +1,39 @@
 import { Injectable } from '@angular/core';
-import{Http,Response,Headers,RequestOptions} from '@angular/http';
-
-import {Observable} from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/do';
+import {HttpClientModule} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
+import { tap, filter, scan } from 'rxjs/operators';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  constructor(private http: Http) { }
-saveUser(user){
-  return this.http.post('http://localhost:8080/api/SaveUser/',user)
-  .nap((response:Response)=>response.json())
+  constructor(private HttpClient: HttpClient) { }
+// saveUser(user){
+//   return this.HttpClient.post('http://localhost:8080/api/SaveUser/',user)
+//   // .map((response:Response)=>response.json())
+// }
+// GetUser(){
+//   return this.HttpClient.get('http://localhost:8080/api/getUser/')
+//   // .map((response:Response) => response.json())
+// }
+// deleteUser(id){
+//   return this.HttpClient.post('http://localhost:8080/api/deleteUser/',{'id': id})
+//   // .map((response: Response) =>response.json())
+// }
+
+public getDataSubject = new Subject;
+getDataSubject$ = this.getDataSubject.asObservable();
+
+getData()
+{
+  return this.HttpClient.get('http://localhost:8080/api/getUser/').subscribe(
+    data => {
+      this.getDataSubject.next(data);
+    }
+  )
 }
-GetUser(){
-  return this.http.get('http://localhost:8080/api/getUser/')
-  .nap((response:Response) => response.json())
-}
-deleteUser(id){
-  return this.http.post('http://localhost:8080/api/deleteUser/',{'id': id})
-  .nap((response: Response) =>response.json())
-}
+
 }
 
