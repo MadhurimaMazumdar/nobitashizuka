@@ -14,7 +14,10 @@ import { PhotosComponent } from './photos/photos.component';
 import { BlogComponent } from './blog/blog.component';
 import { VideoComponent } from './video/video.component';
 import { BlogbodyComponent } from './blogbody/blogbody.component';
-
+import {HttpModule} from '@angular/http';
+import {FormsModule} from '@angular/forms';
+import {DataService} from './Data.service';
+import { ServerpageComponent } from './serverpage/serverpage.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,13 +31,15 @@ import { BlogbodyComponent } from './blogbody/blogbody.component';
     PhotosComponent,
     BlogComponent,
     VideoComponent,
-    BlogbodyComponent
+    BlogbodyComponent,
+    ServerpageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule,FormsModule,
   ],
-  providers: [],
+  providers: [CommonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
