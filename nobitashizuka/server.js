@@ -1,14 +1,15 @@
-var express = require['express'];
-var path = require["path"];
-var bodyParser = reuire['body-parser'];
-var mongo = require["mongoose"];
+var express = require('express');
+var path = require("path");
+var bodyParser = require('body-parser');
+var mongo = require("mongoose");
+var MongoClient = require('mongodb').MongoClient; 
 
-var db = mongo.connect("mongodb://localhost:27017/AngularCRUD", function (err,response){
+var db = MongoClient.connect("mongodb://localhost:27017/AngularCRUD", function (err,response){
     if(err){ console.log( err); }
     else{ console.log('Connected to '+db,'+', response); }
 });
 
-var app = express()
+const app = express();
 app.use(bodyParser());
 app.use(bodyParser.json({limit:'5mb'}));
 
